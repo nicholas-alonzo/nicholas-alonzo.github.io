@@ -1,0 +1,11 @@
+<!-- 
+Resources used to make shortcode to embed svg at full size
+-  https://discourse.gohugo.io/t/embedding-inline-svg-in-content-markdown/7511/9
+- themes/blowfish/layouts/shortcodes/icon.html
+-->
+{{ $svg := resources.Get (printf "svg/%s" ($.Get 0)) }}
+{{ if $svg }}
+    {{ $svg.Content | safeHTML }}
+{{ else }}
+  {{ errorf `[BLOWFISH] Shortcode "svg" error in "%s": Resource "%s" not found. Check the path is correct or remove the shortcode.` .Page.Path (printf "svg/%s" ($.Get 0)) }}
+{{ end }}
