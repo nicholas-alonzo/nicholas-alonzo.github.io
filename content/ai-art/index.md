@@ -1,6 +1,8 @@
 ---
 title: "AI Art"
 description: "Testing"
+showDate: false
+showAuthor: false
 ---
 
 Here's a gallery of AI art I've made using Amuse. I use these Stable Diffusion models
