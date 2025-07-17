@@ -28,7 +28,7 @@ defaultFeaturedImage = "img/default-featured.png" # used as default for featured
 
 highlightCurrentMenuArea = true
 smartTOC = true
-smartTOCHideUnfocusedChildren = true
+smartTOCHideUnfocusedChildren = false
 
 fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384", "sha256"
 
@@ -42,7 +42,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showMenu = true
   showCopyright = true
   showThemeAttribution = false
-  showAppearanceSwitcher = true
+  showAppearanceSwitcher = false
   showScrollToTop = true
 
 [homepage]
@@ -122,7 +122,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 [term]
   showHero = true
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
-  showBreadcrumbs = false
+  showBreadcrumbs = true
   showViews = false
   showLikes = false
   showTableOfContents = true
