@@ -1,7 +1,6 @@
 ---
 title: "Posts"
 cascade: 
-    showSummary: true
     showDate: false
 ---
 

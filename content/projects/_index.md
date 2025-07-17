@@ -1,7 +1,6 @@
 ---
 title: "Projects"
-cascase:
-    showSummary: true
+cardView: false
 ---
 
 This section contains all my current and past projects
