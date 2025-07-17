@@ -1,6 +1,9 @@
 ---
 title: "Posts"
-description: "This section contains all my posts"
-
+cascade: 
+    showSummary: true
+    showDate: false
 ---
+
+This contains all my posts categorized into ...
 
