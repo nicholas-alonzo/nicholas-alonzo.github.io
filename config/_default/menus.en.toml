@@ -20,6 +20,11 @@
  pageRef = "projects"
  weight = 15
 
+[[main]]
+ name = "AI Art"
+ pageRef = "ai-art"
+ weight = 20
+
 # [[main]]
 #  name = "Parent"
 #  weight = 20
@@ -63,10 +68,10 @@
 # the copyright notice. Configure as per the main menu above.
 
 
-# [[footer]]
-#   name = "Tags"
-#   pageRef = "tags"
-#   weight = 10
+[[footer]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 10
 
 # [[footer]]
 #   name = "Categories"

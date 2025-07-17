@@ -1,5 +1,6 @@
 ---
 title: "Posts"
+description: "This section contains all my posts"
+
 ---
 
-This section contains all my posts

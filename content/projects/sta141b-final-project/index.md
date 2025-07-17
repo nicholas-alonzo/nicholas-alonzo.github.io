@@ -1,7 +1,19 @@
 ---
 title: "UFO Sightings & Natural Disasters: A Coincidence?"
-showDateUpdated: true
+description: ""
 ---
+
+<details>
+<summary>How the background image was generated</summary>
+
+- Software: Amuse
+- Prompt: an illustration of a ufo flying over a forest at dawn
+- Model: Juggernaut XL v11
+- Inference Steps: 20
+- Guidance Scale: 6.00
+- Seed: 1157435293
+
+</details>
 
 ## Data Background & Description
 
