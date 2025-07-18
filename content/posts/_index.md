@@ -4,5 +4,4 @@ cascade:
     showDate: false
 ---
 
-This contains all my posts categorized into ...
-
+This section contains all my posts ...

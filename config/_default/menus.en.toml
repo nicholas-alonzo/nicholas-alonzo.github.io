@@ -11,6 +11,11 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
+ name = "About"
+ pageRef = "about"
+ weight = 5
+
+[[main]]
  name = "Posts"
  pageRef = "posts"
  weight = 10
@@ -24,6 +29,11 @@
  name = "AI Art"
  pageRef = "ai-art"
  weight = 20
+
+[[main]]
+ name = "Resources"
+ pageRef = "resources"
+ weight = 25
 
 # [[main]]
 #  name = "Parent"

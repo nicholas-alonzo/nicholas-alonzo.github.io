@@ -19,7 +19,7 @@ title = "Nicholas Alonzo"
 #   email = "youremail@example.com"
   image = "https://avatars.githubusercontent.com/u/18094720?v=4"
   imageQuality = 96
-  headline = "Data & Tech Enthusiast"
+  headline = "{{< typeit startDelay=1400 speed=130 lifeLike=true breakLines=false loop=true >}}Data & Tech Enthusiast\nSharing Knowledge\nHelping Others Suceed{{< /typeit >}}"
   # bio = "A little bit about you"
   links = [
 #     { email = "mailto:hello@your_domain.com" },

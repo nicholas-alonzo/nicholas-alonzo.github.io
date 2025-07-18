@@ -1,0 +1,5 @@
+---
+title: "Hompage"
+---
+
+{{< typeit >}}{{< /typeit >}}

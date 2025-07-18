@@ -1,8 +1,9 @@
 ---
 title: "AI Art"
-description: "Testing"
 showDate: false
 showAuthor: false
+showPagination: false
+sharingLinks: [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram", "line"]
 ---
 
 Here's a gallery of AI art I've made using Amuse. I use these Stable Diffusion models
