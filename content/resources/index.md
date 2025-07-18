@@ -169,7 +169,15 @@ Here's a list of resources focused on privacy, security, productivity, and tech 
 
   > Host of "Room Tour Project" • Tech Reviews • Gaming Setups • Looking for a new gaming keyboard? Want to build a gaming PC? How about some cool tech gadget's under $50? I gotchu.
 
+- [Linus Tech Tips](https://www.youtube.com/@LinusTechTips)
+
+  > Linus Tech Tips is a passionate team of "professionally curious" experts in consumer technology and video production who aim to educate and entertain.
+
 ## Websites
+
+- [PCPartPicker](https://pcpartpicker.com/)
+
+  > PCPartPicker provides computer part selection, compatibility, and pricing guidance for do-it-yourself computer builders.
 
 - [Privacy Guides](https://www.privacyguides.org/en/)
 
