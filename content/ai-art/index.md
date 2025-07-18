@@ -6,7 +6,7 @@ showPagination: false
 sharingLinks: [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram", "line"]
 ---
 
-Here's a gallery of AI art I've made using Amuse. I use these Stable Diffusion models
+Here's a gallery of AI art I've made using Amuse. I use these Stable Diffusion models:
 - Juggernaut XL v11
 - Juggernaut XL v11 Lightning
 - SDXL Base 1.0
