@@ -1,5 +1,6 @@
 ---
-title: Resources
+title: "Resources"
+summary: "Resources focused on privacy, security, productivity, and tech in general"
 showDate: false
 showPagination: false
 showAuthor: false

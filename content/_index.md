@@ -1,5 +1,5 @@
 ---
-title: "Hompage"
+title: "Homepage"
 ---
 
 {{< typeit >}}{{< /typeit >}}

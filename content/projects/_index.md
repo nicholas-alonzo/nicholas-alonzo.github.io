@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+summary: "All my projects"
 cardView: false
 cascade:
     showHeadingAnchors: true

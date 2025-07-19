@@ -1,5 +1,6 @@
 ---
 title: "About"
+summary: "Hey, there, I'm Nicholas! Read about me"
 showDate: false
 showPagination: false
 showAuthor: true
@@ -37,6 +38,8 @@ Hey there, I'm Nicholas! I'm a data & tech enthusiast with a background in the n
   - Case: Fractal Design North XL ATX Full Tower Case
   - Power Supply: EVGA SuperNOVA 1000 G3 1000 W 80+ Gold Certified Fully Modular ATX Power Supply
   - Case Fan: Noctua A14 PWM chromax.black.swap 82.52 CFM 140 mm Fan
+
+- __Desk__: Uplift Desk v2 72" x 30"
 
 - __Monitor__: 3 x AOC C24G1A 24" Curved Gaming Monitor (165Hz)
 

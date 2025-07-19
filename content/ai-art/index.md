@@ -1,5 +1,6 @@
 ---
 title: "AI Art"
+summary: "A gallery of AI art I've made"
 showDate: false
 showAuthor: false
 showPagination: false
