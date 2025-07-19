@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nicholas-alonzo.com/sitemap.xml
