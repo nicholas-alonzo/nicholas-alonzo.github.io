@@ -12,15 +12,13 @@
   </defs>
 
   <!-- Water droplets with ripple effect -->
-  <circle cx="300" cy="300" r="50" fill="skyblue" class="ripple" style="animation-duration: 5s;" />
-  <circle cx="600" cy="400" r="30" fill="skyblue" class="ripple" style="animation-duration: 7s;" />
-  <circle cx="900" cy="250" r="80" fill="skyblue" class="ripple" style="animation-duration: 4s;" />
-  <circle cx="1200" cy="500" r="40" fill="skyblue" class="ripple" style="animation-duration: 2.5s;" />
+  <circle cx="100" cy="900" r="50" fill="skyblue" class="ripple" style="animation-duration: 5.2s;" />
+  <circle cx="900" cy="250" r="30" fill="skyblue" class="ripple" style="animation-duration: 5s;" />
+  <circle cx="350" cy="550" r="60" fill="skyblue" class="ripple" style="animation-duration: 6s;" />
+  <circle cx="1200" cy="1000" r="40" fill="skyblue" class="ripple" style="animation-duration: 4s;" />
   <circle cx="1500" cy="350" r="70" fill="skyblue" class="ripple" style="animation-duration: 3.5s;" />
   
-  <circle cx="1500" cy="100" r="90" fill="skyblue" class="ripple" style="animation-duration: 3.9s;" />
-  <circle cx="2000" cy="654" r="70" fill="skyblue" class="ripple" style="animation-duration: 4.2s;" />
-  <circle cx="10" cy="74" r="10" fill="skyblue" class="ripple" style="animation-duration: 8s;" />
-  <circle cx="-100" cy="94" r="20" fill="skyblue" class="ripple" style="animation-duration: 5.5s;" />
-  <circle cx="-654" cy="73" r="55" fill="skyblue" class="ripple" style="animation-duration: 10.5s;" />
+  <circle cx="1900" cy="100" r="80" fill="skyblue" class="ripple" style="animation-duration: 4.4;" />
+  <circle cx="1900" cy="800" r="95" fill="skyblue" class="ripple" style="animation-duration: 4.2s;" />
+  <circle cx="10" cy="74" r="90" fill="skyblue" class="ripple" style="animation-duration: 5.5s;" />
 </svg>
