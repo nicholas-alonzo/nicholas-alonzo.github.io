@@ -13,16 +13,16 @@
 
   <!-- Water droplets with ripple effect -->
   <!-- top left -->
-  <circle cx="10" cy="74" r="5" fill="skyblue" class="ripple" style="animation-duration: 6s;" />
+  <circle cx="10" cy="74" r="80" fill="skyblue" class="ripple" style="animation-duration: 6s;" />
   <!-- top right -->
-  <circle cx="1900" cy="100" r="5" fill="skyblue" class="ripple" style="animation-duration: 6.5s;" />
+  <circle cx="1900" cy="100" r="80" fill="skyblue" class="ripple" style="animation-duration: 6.5s;" />
   <!-- bottom left -->
-  <circle cx="100" cy="900" r="5" fill="skyblue" class="ripple" style="animation-duration: 7s;" />
+  <circle cx="100" cy="900" r="80" fill="skyblue" class="ripple" style="animation-duration: 7s;" />
   <!-- bottom right -->
-  <circle cx="1900" cy="800" r="5" fill="skyblue" class="ripple" style="animation-duration: 7.5s;" />
+  <circle cx="1900" cy="800" r="80" fill="skyblue" class="ripple" style="animation-duration: 7.5s;" />
   <!-- bottom center -->
-  <circle cx="1200" cy="1000" r="5" fill="skyblue" class="ripple" style="animation-duration: 8s;" />
+  <circle cx="1200" cy="1000" r="80" fill="skyblue" class="ripple" style="animation-duration: 8s;" />
   <!-- next to profile picture -->
-  <circle cx="900" cy="250" r="5" fill="skyblue" class="ripple" style="animation-duration: 8.2s;" />
+  <circle cx="900" cy="250" r="80" fill="skyblue" class="ripple" style="animation-duration: 8.2s;" />
   
 </svg>
