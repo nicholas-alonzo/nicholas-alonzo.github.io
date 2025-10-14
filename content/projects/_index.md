@@ -6,4 +6,4 @@ cascade:
     showHeadingAnchors: true
 ---
 
-This section contains all my school or personal projects
+This section contains all my class, work, or personal projects

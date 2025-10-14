@@ -2,7 +2,7 @@
 title: "UFO Sightings & Natural Disasters: A Coincidence?"
 summary: "In this analysis, we explore UFO sightings and declared natural disasters in the United States from the years 1965 to 2013"
 date: 2017-03-22
-tags: ["School Project"]
+tags: ["Class Project"]
 layoutBackgroundHeaderSpace: true
 ---
 
