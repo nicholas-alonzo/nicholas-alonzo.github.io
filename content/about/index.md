@@ -38,6 +38,7 @@ Hey there, I'm Nicholas! I'm a data & tech enthusiast with a background in the n
   - Case: Fractal Design North XL ATX Full Tower Case
   - Power Supply: EVGA SuperNOVA 1000 G3 1000 W 80+ Gold Certified Fully Modular ATX Power Supply
   - Case Fan: Noctua A14 PWM chromax.black.swap 82.52 CFM 140 mm Fan
+  - Operating System: Windows 11 Pro
 
 - __Desk__: Uplift Desk v2 72" x 30"
 
@@ -52,3 +53,14 @@ Hey there, I'm Nicholas! I'm a data & tech enthusiast with a background in the n
 - __Webcam__: Logitech Brio 4K
 
 - __Chair__: Hinomi H1 Pro
+
+- __Homelab__:
+  - Raspberry Pi 5 - 8 GB
+  - Memory: TEAMGROUP MP33 1TB
+  - Case: GeeekPi Metal Case
+  - Operating System: Raspberry Pi OS Lite (CasaOS)
+  - Connectivity: Netbird
+  - Docker Apps:
+    - Linkwarden
+    - Immich
+    - Gitea
