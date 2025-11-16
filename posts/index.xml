@@ -1,5 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Nicholas Alonzo</title><link>https://nicholas-alonzo.com/posts/</link><description>Recent content in Posts on Nicholas Alonzo</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2025 Nicholas Alonzo</copyright><lastBuildDate>Sat, 01 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://nicholas-alonzo.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>October 26 - November 1, 2025</title><link>https://nicholas-alonzo.com/posts/2025-11-01/</link><pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate><guid>https://nicholas-alonzo.com/posts/2025-11-01/</guid><description>asyncpg /
-dbx /
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Nicholas Alonzo</title><link>https://nicholas-alonzo.com/posts/</link><description>Recent content in Posts on Nicholas Alonzo</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2025 Nicholas Alonzo</copyright><lastBuildDate>Sat, 15 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://nicholas-alonzo.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>November 2 - 15, 2025</title><link>https://nicholas-alonzo.com/posts/2025-11-15/</link><pubDate>Sat, 15 Nov 2025 00:00:00 +0000</pubDate><guid>https://nicholas-alonzo.com/posts/2025-11-15/</guid><description>Atlas /
+Delta Lake /
+Affinity /
+Graphite /
+Cyberduck /
+Postal /
+Mautic /
+Plunk /
+useSend /
+SendPortal /
+PikaPods /
+Pydantic</description></item><item><title>October 26 - November 1, 2025</title><link>https://nicholas-alonzo.com/posts/2025-11-01/</link><pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate><guid>https://nicholas-alonzo.com/posts/2025-11-01/</guid><description>asyncpg /
+dbc /
 Turso /
 Bruin /
 Authlib /
