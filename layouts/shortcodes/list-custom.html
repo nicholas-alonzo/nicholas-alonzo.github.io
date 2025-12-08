@@ -1,0 +1,75 @@
+{{/*
+  Custom shortcode for displaying lists of content
+  Supports:
+  - Limit number of items displayed
+  - Optional title display
+  - Card or simple view modes
+  - Filtering by metadata fields
+*/}}
+
+{{ $limit := .Get "limit" | default 1 }}
+{{ $title := .Get "title" | default "" }}
+{{ $parent := .Page.RelPermalink }}
+{{ $cardView := .Get "cardView" }}
+{{ $where := .Get "where" }}
+{{ $value := .Get "value" }}
+
+{{/*
+  Filter results based on where condition
+  If no where filter, use all regular pages
+  Otherwise apply the filtering to get matching pages
+*/}}
+{{ $results := cond $where (where .Site.RegularPages $where $value) .Site.RegularPages }}
+{{/* 
+  Get filtered results with limit applied
+  First filters by where condition if applicable, then takes first N items
+*/}}
+{{ $filteredResults := cond $where (first $limit (where .Site.RegularPages $where $value)) (first $limit .Site.RegularPages) }}
+{{/*
+  Count the number of results to determine if we should show content
+*/}}
+{{ $count := len $filteredResults }}
+
+{{/*
+  Only show content sections when there are results to display
+  This prevents empty sections from appearing in the output
+*/}}
+{{ if gt $count 0 }}
+
+  {{/*
+    Only display title if it's not empty
+  */}}
+  {{ if not (eq $title "") }}
+    <h2 class="mt-18 text-2xl font-extrabold mb-7">{{ $title }}</h2>
+  {{ end }}
+
+  {{/*
+    Display as card view (grid layout) if enabled
+  */}}
+  {{ if $cardView | default false }}
+    <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+      {{ range $filteredResults }}
+        {{/*
+          Skip the current page to avoid showing it in the list
+        */}}
+        {{ if not (eq .RelPermalink $parent) }}
+          {{ partial "article-link/card.html" . }}
+        {{ end }}
+      {{ end }}
+    </section>
+  {{/* 
+    Otherwise display as simple list view
+  */}}
+  {{ else }}
+    <section class="space-y-10 w-full mt-10 mb-10">
+      {{ range $filteredResults }}
+        {{/*
+          Skip the current page to avoid showing it in the list
+        */}}
+        {{ if not (eq .RelPermalink $parent) }}
+          {{ partial "article-link/simple.html" . }}
+        {{ end }}
+      {{ end }}
+    </section>
+  {{ end }}
+{{ end }}
