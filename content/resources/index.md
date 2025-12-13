@@ -190,6 +190,10 @@ Here's a list of resources focused on privacy, security, productivity, and tech 
 
   > Tina Huang is a data scientist and YouTuber known for her content on AI, coding, tech, career development, and self-study. Her YouTube channel focuses on helping viewers learn efficiently, minimize effort while maximizing outcomes, and leverage AI and data skills in their careers.
 
+- [Christian Lempa](https://www.youtube.com/@christianlempa)
+
+  > Christian Lempa is a tech enthusiast, YouTube content creator, and IT professional known for producing educational content focused on IT professionals and homelab enthusiasts. His content covers areas such as DevOps, automation, Docker, Kubernetes, Linux, and self-hosted infrastructure, with a strong emphasis on hands-on learning and practical knowledge.
+
 ## Websites
 
 - [PCPartPicker](https://pcpartpicker.com/)
