@@ -1,0 +1,206 @@
+<!-- 
+This partial renders a hero section with featured image handling.
+It supports multiple sources for images including remote URLs, local resources, and default backgrounds.
+
+Variables:
+- $disableImageOptimization: Boolean flag to disable image optimization (from site.Store)
+- $useDefault: Boolean indicating if using default background
+- $featured: Local resource reference
+- $featuredURL: Final URL for the featured image
+
+Key logic flow:
+1. Check for featureimage parameter
+2. Handle remote URLs vs local resources
+3. Fall back to page resources if no explicit feature image found
+4. Use default background when all else fails
+5. Generate optimized image URL (if not hotlinking)
+6. Process caption and alt text for accessibility
+
+Main output:
+- Figure element with img tag and optional figcaption
+- Responsive image display with proper attributes
+-->
+{{ $disableImageOptimization := site.Store.Get "disableImageOptimization" }}
+
+<!-- Initialize background variables -->
+{{ $useDefault := false }}
+{{ $images := .Resources.ByType "image" }}
+{{ $background := $images.GetMatch "*background*" }}
+{{ $backgroundURL := "" }}
+
+<!-- Check if we have a background image or URL already set -->
+{{ if not (or $background $backgroundURL) }}
+  <!-- If no background found, check for default background from site store -->
+  {{ $default := site.Store.Get "defaultBackgroundImage" }}
+  {{ if $default.url }}
+    <!-- Use default URL if available -->
+    {{ $backgroundURL = $default.url }}
+    {{ $useDefault = true }}
+  {{ else if $default.obj }}
+    <!-- Use default object reference if available -->
+    {{ $background = $default.obj }}
+    {{ $useDefault = true }}
+  {{ end }}
+{{ end }}
+
+<!-- If still no background, try to find from page resources -->
+{{ if not (or $background $backgroundURL) }}
+  <!-- Search for common image patterns -->
+  {{ range slice "*cover*" "*thumbnail*" "*feature*" }}
+    {{ if not $background }}{{ $background = $images.GetMatch . }}{{ end }}
+  {{ end }}
+{{ end }}
+
+<!-- Generate image URL if not hotlinking -->
+{{ if not $backgroundURL }}
+  {{ with $background }}
+    <!-- Get permalink for background image -->
+    {{ $backgroundURL = .RelPermalink }}
+    <!-- Apply optimization unless disabled or SVG -->
+    {{ if not (or $disableImageOptimization (eq .MediaType.SubType "svg")) }}
+      {{ $size := site.Store.Get "backgroundImageWidth" }}
+      {{ $backgroundURL = (.Resize $size).RelPermalink }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<!-- Render background container -->
+<div class="single_hero_background nozoom fixed inset-x-0 top-0 h-[800px]">
+  <!-- Display background image with appropriate styling -->
+  {{ with $backgroundURL }}
+    {{ $style := "" }}
+    <!-- Determine default position if using default background -->
+    {{ $defaultPosition := cond $useDefault site.Params.imagePosition false }}
+    <!-- Set custom positioning from parameters or defaults -->
+    {{ with $.Params.imagePosition | default $defaultPosition }}
+      {{ $style = printf "object-position: %s;" . }}
+    {{ end }}
+    <img
+      id="background-image-main"
+      src="{{ . }}"
+      alt=""
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 h-full w-full object-cover"
+      {{ if $style }}style="{{ $style | safeCSS }}"{{ end }}>
+  {{ end }}
+  <!-- Gradient overlays for visual enhancement -->
+  <div
+    class="from-neutral absolute inset-0 bg-gradient-to-t to-transparent mix-blend-normal dark:from-neutral-800"></div>
+  <div
+    class="from-neutral to-neutral absolute inset-0 bg-gradient-to-t opacity-30 mix-blend-normal dark:from-neutral-800 dark:to-neutral-800 dark:opacity-60"></div>
+</div>
+
+<!-- 
+Check if featureimage parameter exists and handle remote/local resources
+ -->
+{{ $useDefault := false }}
+{{ $featured := "" }}
+{{ $featuredURL := "" }}
+
+<!-- Process feature image parameter -->
+{{ with .Params.featureimage }}
+  {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+    <!-- Handle external URLs -->
+    {{ if site.Params.hotlinkFeatureImage }}
+      <!-- Use URL directly if hotlinking enabled -->
+      {{ $featuredURL = . }}
+    {{ else }}
+      <!-- Fetch remote image resource -->
+      {{ $featured = resources.GetRemote . }}
+    {{ end }}
+  {{ else }}
+    <!-- Handle local resource references -->
+    {{ $featured = resources.Get . }}
+  {{ end }}
+{{ end }}
+
+<!-- 
+If no explicit feature image, try to find from page resources
+ -->
+{{ if not (or $featured $featuredURL) }}
+  <!-- Search through all images in the page's resources -->
+  {{ $images := .Resources.ByType "image" }}
+  {{ range slice "*background*" "*feature*" "*cover*" "*thumbnail*" }}
+    <!-- Find matching images with common patterns -->
+    {{ if not $featured }}{{ $featured = $images.GetMatch . }}{{ end }}
+  {{ end }}
+{{ end }}
+
+<!-- 
+Fall back to default background when no explicit feature image found
+ -->
+{{ if not (or $featured $featuredURL) }}
+  <!-- Use default background from site store -->
+  {{ $default := site.Store.Get "defaultBackgroundImage" }}
+  {{ if $default.url }}
+    <!-- Use default URL if available -->
+    {{ $featuredURL = $default.url }}
+    {{ $useDefault = true }}
+  {{ else if $default.obj }}
+    <!-- Use default object reference -->
+    {{ $featured = $default.obj }}
+    {{ $useDefault = true }}
+  {{ end }}
+{{ end }}
+
+<!-- 
+Generate image URL for local resources (unless hotlinking)
+ -->
+<!-- Process local resource to get optimized permalink -->
+{{/* generate image URL if not hotlink */}}
+{{ if not $featuredURL }}
+  {{ with $featured }}
+    <!-- Get permalink for featured image -->
+    {{ $featuredURL = .RelPermalink }}
+    <!-- Apply optimization unless disabled or SVG -->
+    {{ if not (or $disableImageOptimization (eq .MediaType.SubType "svg")) }}
+      {{ $size := site.Store.Get "backgroundImageWidth" }}
+      {{ $featuredURL = (.Resize $size).RelPermalink }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<!-- 
+Process caption and alt text
+ -->
+{{ $caption := "" }}
+{{ if .Params.featureimagecaption }}
+  <!-- Set caption from parameter -->
+  {{- $caption = .Params.featureimagecaption -}}
+{{ end }}
+
+<!-- Set alternative text -->
+{{- $alt := .Page.Title -}}
+{{- with .Page.Params.alt }}{{ $alt = . }}{{ end -}}
+
+<!-- 
+Render the final figure element
+ -->
+{{ with $featuredURL }}
+  <!-- Apply positioning styles -->
+  {{ $style := "" }}
+  {{ $defaultPosition := cond $useDefault site.Params.imagePosition false }}
+  {{ with $.Params.imagePosition | default $defaultPosition }}
+    {{ $style = printf "object-position: %s;" . }}
+  {{ end }}
+  <figure>
+    <!-- Display the featured image -->
+    <img
+      src="{{ . }}"
+      alt="{{ $alt }}"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="w-full rounded-lg single_hero_round nozoom"
+      {{ if $style }}style="{{ $style | safeCSS }}"{{ end }}>
+    <!-- Render caption if available -->
+    {{ if $caption }}
+      <figcaption class="text-sm text-neutral-700 dark:text-neutral-400 hover:underline text-center">
+        {{ $caption | markdownify }}
+      </figcaption>
+    {{ end }}
+  </figure>
+{{ end }}
