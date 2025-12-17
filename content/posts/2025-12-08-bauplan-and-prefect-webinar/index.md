@@ -3,6 +3,7 @@ title: "Build Modern Python Data Pipelines with Prefect and Bauplan"
 summary: "​Learn how Prefect and Bauplan work together to create a fully Python-native data platform, presented by Prefect"
 tags: ["Event"]
 date: 2025-12-08
+modified: 2025-12-16
 showDate: true
 heroStyle: "thumbAndBackground"
 featurePage: true
@@ -49,5 +50,9 @@ What a cool experience to listen in and see how modern technologies interact wit
 - Below is the GitHub repo used during the webinar:
 
   {{< github repo="BauplanLabs/bauplan_with_prefect" showThumbnail=false >}}
+
+- Below is the video of the webinar
+
+  {{< youtubeLite id="xRKdaKauGTc" label="Build Better Data Pipelines with Prefect + Bauplan | Webinar" >}}
 
 As someone who's still learning about more modern data engineering tools this was fun. Next steps for me are to do testing with the tools and build something out.
