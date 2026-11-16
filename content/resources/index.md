@@ -22,10 +22,6 @@ Here's a list of resources focused on privacy, security, productivity, and tech 
 
   > ComfyUI is open-source and lets you design and execute advanced stable diffusion pipelines using a graph/nodes/flowchart based interface.
 
-- [Continue](https://www.continue.dev/) 
-
-  > Continue is an open-source AI coding assistant designed to integrate seamlessly into popular development environments like Visual Studio Code and JetBrains IDEs, aiming to enhance developer productivity through intelligent automation.
-
 - [HuggingFace](https://huggingface.co/)
 
   > Hugging Face is a company and platform where the machine learning community collaborates on models, datasets, and applications.
