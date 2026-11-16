@@ -86,10 +86,6 @@ Here's a list of resources focused on privacy, security, productivity, and tech 
 
 ### NAS
 
-- [CasaOS](https://casaos.zimaspace.com/)
-
-  > CasaOS is an open-source NAS (Network Attached Storage) operating system designed to simplify the setup and management of home servers, offering a user-friendly interface and support for containerized applications.
-
 - [ZimaOS](https://www.zimaspace.com/zimaos)
 
   > ZimaOS is a full personal cloud operating system developed by IceWhale Technology, designed specifically for x86-64 hardware and built on the foundation of the CasaOS community. It functions as a complete operating system with system-level support for remote access, RAID configuration, and essential features like OTA updates, focusing on stability, unified data management, and local AI capabilities.
